@@ -1,0 +1,11 @@
+apiVersion: skaffold/v2beta6
+kind: Config
+metadata:
+  name: skaffold-bug-example
+build:
+  artifacts:
+  - image: my-hello-world
+deploy:
+  kubectl:
+    manifests:
+    - deployment.yaml
